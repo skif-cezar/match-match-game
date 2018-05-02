@@ -259,6 +259,11 @@ function startGame(number_game, back){
         var len = openedCards.length;
         let card = document.getElementsByClassName("card");
         let cards = [...card];
+        if(len === 2) {
+            for(let i =0; i < cards.length; i++) {
+                cards[i].classList.add('disabled');
+            }
+        }
 
         setTimeout(function(){
             if(len === 2){
@@ -268,6 +273,9 @@ function startGame(number_game, back){
                     openedCards[1].classList.add("close");
                     openedCards[0].classList.remove("show", "open");
                     openedCards[1].classList.remove("show", "open");
+                    for(let i =0; i < cards.length; i++) {
+                        cards[i].classList.remove('disabled');
+                    }
                     openedCards=[];
                     count++;
                     if(count == number_game/2) {
@@ -319,14 +327,18 @@ function startGame(number_game, back){
                         openedCards[0].style.background = 'url(images/background1.jpg)';
                         openedCards[1].classList.value='card';
                         openedCards[1].style.background = 'url(images/background1.jpg)';
-
+                        for(let i =0; i < cards.length; i++) {
+                            cards[i].classList.remove('disabled');
+                        }
                         openedCards=[];
                     } else if (back === 'url("images/background2.jpg")') {
                         openedCards[0].classList.value='card';
                         openedCards[0].style.background = 'url(images/background2.jpg)';
                         openedCards[1].classList.value='card';
                         openedCards[1].style.background = 'url(images/background2.jpg)';
-
+                        for(let i =0; i < cards.length; i++) {
+                            cards[i].classList.remove('disabled');
+                        }
                         openedCards=[];
                     }
 
