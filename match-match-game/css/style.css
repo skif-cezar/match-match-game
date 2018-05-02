@@ -1,0 +1,693 @@
+@font-face {
+    font-family: 'Shlop';
+    src: url(../fonts/shlop.ttf);
+}
+@font-face {
+    font-family: 'Bloodyslime';
+    src: url(../fonts/bloodyslime.ttf);
+}
+@font-face {
+    font-family: 'Haunt AOE';
+    src: url(../fonts/haunt-aoe.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/background.png");
+    background-attachment: fixed;
+    background-color: black;
+    background-size: 100%;
+    cursor: url("../images/cursor.png"), auto;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1600px;
+}
+
+.content {
+    /*min-height: calc(100vh - 320px);*/
+
+}
+
+.header {
+    background-size: 100%;
+    position: relative;
+    top: 0;
+    background-repeat: no-repeat;
+    /*width: 1600px;*/
+    height: 159px;
+}
+
+/*ul {*/
+    /*display: block;*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*list-style: none;*/
+/*}*/
+/*ul:after {*/
+    /*display: block;*/
+    /*content: ' ';*/
+    /*clear: both;*/
+    /*float: none;*/
+/*}*/
+/*ul.menu > li {*/
+    /*float: left;*/
+    /*position: relative;*/
+/*}*/
+/*ul.menu > li > a {*/
+    /*text-decoration: none;*/
+    /*background-color: inherit;*/
+    /*font-family: 'Shlop', arial;*/
+    /*padding: 48px 13px 5px 13px;*/
+    /*font-style: normal;*/
+    /*font-weight: 600;*/
+    /*font-size: 40px;*/
+    /*color: #7e1212;*/
+    /*letter-spacing: 4px;*/
+    /*user-select: none;*/
+    /*-moz-user-select: none;*/
+    /*display: block;*/
+/*}*/
+/*ul.menu > li > a:hover {*/
+    /*background-color: black;*/
+/*}*/
+/*ul.submenu {*/
+    /*display: none;*/
+    /*position: absolute;*/
+    /*width: 120px;*/
+    /*top: 37px;*/
+    /*left: 0;*/
+    /*background-color: white;*/
+    /*border: 1px solid red;*/
+/*}*/
+/*ul.submenu > li {*/
+    /*display: block;*/
+/*}*/
+/*ul.submenu > li > a {*/
+    /*text-decoration: none;*/
+    /*background-color: inherit;*/
+    /*font-family: 'Shlop', arial;*/
+    /*padding: 48px 13px 5px 13px;*/
+    /*font-style: normal;*/
+    /*font-weight: 600;*/
+    /*font-size: 40px;*/
+    /*color: #7e1212;*/
+    /*letter-spacing: 4px;*/
+    /*user-select: none;*/
+    /*-moz-user-select: none;*/
+    /*display: block;*/
+/*}*/
+/*ul.submenu > li > a:hover {*/
+    /*color: aliceblue;*/
+    /*transition: 0.5s;*/
+/*}*/
+
+/*ul.menu > li:hover > ul.submenu {*/
+    /*display: block;*/
+/*}*/
+/*menu*/
+.menu ul {
+    display: none;
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+    overflow: hidden;
+}
+
+.menu .title {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: inherit;
+    font-family: 'Shlop', arial;
+    padding: 48px 13px 5px 13px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    color: #7e1212;
+    letter-spacing: 4px;
+    user-select: none;
+    -moz-user-select: none;
+    display: block;
+}
+.menu .title:hover {
+    color: aliceblue;
+    transition: 0.5s;
+}
+
+.menu.open ul {
+    display: block;
+}
+
+/*end menu*/
+.header__menu a {
+    text-decoration: none;
+    background-color: inherit;
+    font-family: 'Shlop', arial;
+    padding: 48px 13px 5px 13px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    color: #7e1212;
+    letter-spacing: 4px;
+    user-select: none;
+    -moz-user-select: none;
+    display: block;
+}
+
+.header__menu > ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    overflow: hidden;
+    max-width: 1200px;
+}
+
+.header__menu a:hover {
+    color: aliceblue;
+    transition: 0.5s;
+}
+
+.header__menu li {
+    float: left;
+    position: relative;
+    margin-left: 29px;
+    cursor: pointer;
+}
+
+.header__menu {
+    height: 72px;
+    margin-left: 200px;
+    float: left;
+    padding-right: 15px;
+    position: relative;
+}
+
+.logo a {
+    display: block;
+    position: absolute;
+    left: 70px;
+    top: 15px;
+    background: url("../images/logo.png") no-repeat;
+    width: 120px;
+    height: 150px;
+    background-size: auto 150px;
+    transition: transform .5s;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.logo:hover a {
+    background-image: url("../images/logo2.png");
+    -webkit-transform: rotateZ(-20deg);
+    -ms-transform: rotateZ(-20deg);
+    transform: rotateZ(-20deg);
+    width: 160px;
+    height: 160px;
+    background-size: 120px auto;
+}
+
+.rules-of-the-game {
+    margin: 0 auto;
+    width: 900px;
+    color: #7e1212;
+    /*background-image: url("../images/background-main.jpg");*/
+    background-image: url("../images/background-main.png");
+    overflow: hidden;
+    height: 1050px;
+    max-height: 1050px;
+}
+
+h1 {
+    font-family: 'Bloodyslime', arial;
+    color: #7e1212;
+    font-size: 55px;
+    font-weight: 500;
+    margin: 35px;
+}
+
+h2 {
+    font-family: 'Bloodyslime', arial;
+    font-size: 55px;
+    font-weight: 500;
+    margin: 35px;
+}
+
+p {
+    font-family: 'Haunt AOE', arial;
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 20px;
+
+}
+
+article {
+    text-align: center;
+    width: 850px;
+    margin-top: -20px;
+    margin-left: 40px;
+
+}
+
+.welcome {
+    margin-top: 45px;
+}
+
+/*.button__sign-in {*/
+    /*font-family: 'Shlop', arial;*/
+    /*font-style: normal;*/
+    /*font-weight: 600;*/
+    /*font-size: 50px;*/
+    /*user-select: none;*/
+    /*-moz-user-select: none;*/
+    /*background: none;*/
+    /*margin-top: 30px;*/
+    /*margin-left: 30px;*/
+    /*cursor: pointer;*/
+    /*border: 5px solid;*/
+    /*padding: 10px;*/
+/*}*/
+
+/*.button__sign-in > a {*/
+    /*color: #7e1212;*/
+    /*text-decoration: none;*/
+/*}*/
+
+/*.button__sign-in a:hover {*/
+    /*color: black;*/
+    /*transition: 0.5s;*/
+/*}*/
+
+/*.sign-in {*/
+    /*margin-left: 660px;*/
+    /*margin-top: -100px;*/
+    /*float: left;*/
+/*}*/
+
+.register {
+    margin-left: 50px;
+    margin-top: -95px;
+}
+
+.button__register {
+    font-family: 'Shlop', arial;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+    user-select: none;
+    -moz-user-select: none;
+    background: none;
+    margin-top: 110px;
+    margin-left: 190px;
+    cursor: pointer;
+    border: 5px solid;
+    padding: 10px;
+}
+
+.button__register > a {
+    color: #7e1212;
+    text-decoration: none;
+}
+
+.button__register a:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+.registration {
+    margin: 0 auto;
+    width: 900px;
+    color: #7e1212;
+    /*background-image: url("../images/background-main.jpg");*/
+    background-image: url("../images/background-main.png");
+    overflow: hidden;
+    height: 1050px;
+    max-height: 1050px;
+    display: none;
+}
+
+.form {
+    overflow: hidden;
+    height: auto;
+    margin-left: 155px;
+    margin-top: 170px;
+}
+
+.form__button {
+    text-align: center;
+    width: 600px;
+}
+
+.form__button > button {
+    font-family: 'Shlop', arial;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+    user-select: none;
+    -moz-user-select: none;
+    background: none;
+    margin-top: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+    color: #7e1212;
+    border: 5px solid black;
+    padding: 10px;
+}
+
+.form__button > button:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+.form label {
+    color: #7e1212;
+    font-family: 'Bloodyslime', arial;
+    font-size: 55px;
+    font-weight: 500;
+    cursor: url("../images/cursor.png"), auto;
+}
+
+form input {
+    outline: 0 !important;
+    width: 600px;
+    border: 1px solid #c8c6c6;
+    background-color: #1f1d1d;
+    color: #7c7c7c;
+    font-family: 'Haunt AOE', arial;
+    font-size: 40px;
+    font-style: italic;
+    margin: 8px 30px 22px 0;
+    padding: 9px 1px 9px 14px;
+
+}
+
+form input:focus {
+    border: 1px solid #7e1212;
+}
+
+form input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+form input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+form input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+form input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 50px #1f1d1d !important;
+    -webkit-text-fill-color: #7c7c7c !important;
+    color: #7c7c7c !important;
+}
+
+.top-players {
+    margin: 0 auto;
+    width: 1402px;
+    color: #7e1212;
+    background-image: url("../images/game-back.jpg");
+    overflow: hidden;
+    height: 600px;
+    max-height: 600px;
+    display: none;
+}
+
+.table-results {
+    text-align: center;
+    width: 1335px;
+    color: #7e1212;
+    font-family: 'Bloodyslime', arial;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+table {
+    border-spacing: 60px 18px;
+}
+
+/*Code of the game*/
+.field-of-the-game {
+    display: none;
+    /*background-color: #ffffff;*/
+    text-align: center;
+    background-image: url("../images/game-back.jpg");
+    overflow: hidden;
+}
+
+.level-selection {
+    margin: 200px auto;
+    width: 900px;
+    height: 500px;
+    color: #7e1212;
+    background-image: url("../images/game-back.jpg");
+    display: none;
+}
+
+#memory--settings-grid {
+    width: 400px;
+    margin-top: 80px;
+    margin-left: 270px;
+    background: transparent;
+    color: #7e1212;
+    font-family: 'Bloodyslime', arial;
+    font-size: 40px;
+    font-weight: 500;
+    height: 50px;
+    text-align: center;
+    border: 4px solid black;
+    float: left;
+}
+
+#memory--settings-grid option {
+    padding-top:5px;
+    padding-bottom:5px;
+    text-align: center;
+}
+
+.newGame {
+    float: left;
+    margin-left: 50px;
+    margin-top: -15px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: inherit;
+    font-family: 'Shlop', arial;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    color: #7e1212;
+    letter-spacing: 4px;
+    user-select: none;
+    -moz-user-select: none;
+}
+
+.skirtCards {
+    width: 100px;
+    height: 50px;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.section_lvl {
+    float: left;
+    width: 400px;
+    height: 300px;
+}
+
+.section_skirt {
+    height: 300px;
+    margin-left: 500px;
+}
+
+ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.menu {
+    /*margin-top: 410px;*/
+    margin-left: 100px;
+}
+
+ul.menu > li {
+    float: left;
+    position: relative;
+    margin-top: 50px;
+}
+ul.menu > li > a {
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: inherit;
+    font-family: 'Bloodyslime', arial;
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 500;
+    color: #7e1212;
+    user-select: none;
+}
+ul.menu > li > a:hover {
+    color: aliceblue;
+    transition: 0.5s;
+}
+ul.submenu {
+    display: none;
+    position: absolute;
+    width: 270px;
+    text-align: center;
+    left: 0;
+    background-color: white;
+    border: 1px solid #7e1212;
+}
+ul.submenu > li {
+    display: block;
+}
+
+ul.submenu > li > a {
+    display: block;
+    padding: 10px;
+    color: white;
+    background-color: #7e1212;
+    text-decoration: none;
+    font-family: 'Bloodyslime', arial;
+    font-size: 35px;
+}
+ul.submenu > li > a:hover {
+    cursor: pointer;
+    background-color: #000;
+}
+ul.menu > li:hover > ul.submenu {
+    display: block;
+}
+
+.deck {
+    width: 1600px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.card {
+    /*background: url("../images/background1.jpg");*/
+    width: 150px;
+    height: 150px;
+    margin: 25px;
+    float: left;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px red;
+}
+
+.close {
+    opacity: 0;
+    transition: 2s;
+}
+
+.input-timer {
+    display: inline-block;
+    color: #7e1212;;
+    font-family: 'Bloodyslime', arial;
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: -19px;
+    margin-left: -200px;
+    width: 200px;
+    text-align: center;
+    background-color: #d7d9d8;
+}
+
+.play {
+    margin-top: 0px;
+    margin-left: 370px;
+}
+
+.show {
+    visibility: visible !important;
+    opacity: 100 !important;
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    cursor: default;
+    animation-name: flipInY;
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    animation-duration: .75s;
+}
+
+.deck .card.disabled {
+    pointer-events: none;
+    /*opacity: 0.9;*/
+}
+
+@keyframes flipInY {
+    from {
+        transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    40% {
+        transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+        animation-timing-function: ease-in;
+    }
+
+    60% {
+        transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+        opacity: 1;
+    }
+
+    80% {
+        transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    }
+
+    to {
+        transform: perspective(400px);
+    }
+}
+
+@keyframes rubberBand {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        transform: scale3d(.95, 1.05, 1);
+    }
+
+    75% {
+        transform: scale3d(1.05, .95, 1);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes pulse {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        transform: scale3d(1.2, 1.2, 1.2);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
